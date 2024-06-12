@@ -1,0 +1,47 @@
+Input:
+    a
+    a
+    a
+    a
+End
+
+Sigma:
+    a
+    b
+End
+
+States:
+    q1
+    q2
+    q3
+    q4
+    q5
+    q6
+    q7
+    q8
+End
+
+# va verifica daca inputul 
+# este un text format din a care se repeta de un nr div cu 2
+# sau daca e format din b care se repeta de un nr div cu 3
+# * = epsilon
+Transitions:
+    q1, *, q2 # primul ciclu
+    q2, a, q3
+    q3, a, q4
+    q4, a, q3 # mod
+    q1, *, q5 # al doilea ciclu
+    q5, b, q6
+    q6, b, q7
+    q7, b, q8
+    q8, b, q6 # mod
+End
+
+Initial:
+    q1
+End
+
+Final:
+    q4
+    q8
+End

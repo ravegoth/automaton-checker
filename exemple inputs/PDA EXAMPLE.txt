@@ -1,0 +1,42 @@
+Input:
+    (
+        (
+        )
+        (
+        )
+    )
+End
+
+Sigma:
+    (
+    )
+End
+
+States:
+    Q # q e ok 
+    P # p - processing
+End
+
+Transitions:
+    Q, (, epsilon, push A, P # paranteza deschisa prima
+    P, (, epsilon, push A, P # o paranteza deschisa in timpu procesarii
+    P, ), A, pop, P # se taie de pe stiva
+    P, epsilon, $, check $, Q # finalul cand stacku e gol
+End
+
+Initial:
+    Q
+End
+
+Final:
+    Q
+End
+
+StackSymbols:
+    A
+    $
+End
+
+StackInitial:
+    $
+End

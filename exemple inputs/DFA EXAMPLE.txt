@@ -1,0 +1,38 @@
+Input:
+    a
+    a
+    a
+    a
+    b
+    a
+    a
+    b
+    a
+    b
+    b
+    b
+End
+
+Sigma:
+    a
+    b
+End
+
+States:
+    q1 # valid
+    q2 # se termina cu a
+End
+
+# va da check la orice string format din a si b care se termina in b
+Transitions:
+    q1, a, q2
+    q2, b, q1
+End
+
+Initial:
+    q1
+End
+
+Final:
+    q1
+End

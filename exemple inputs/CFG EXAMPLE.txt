@@ -1,0 +1,48 @@
+Variables:
+    S
+    NP
+    VP
+    PP
+    Det
+    N
+    PN
+    V
+    P
+End
+
+Sigma:
+    the
+    a
+    dog
+    cat
+    bird
+    unicorn
+    John
+    Mary
+    Bob
+    Alice
+    chased
+    petted
+    sang
+    to
+    danced
+    with
+    on
+    under
+End
+
+Rules:
+    S -> NP VP
+    NP -> Det N | PN
+    VP -> V NP | V NP PP
+    PP -> P NP
+    Det -> the | a
+    N -> dog | cat | bird | unicorn
+    PN -> John | Mary | Bob | Alice
+    V -> chased | petted | sang to | danced with
+    P -> with | on | under
+End
+
+Input:
+    S
+End
